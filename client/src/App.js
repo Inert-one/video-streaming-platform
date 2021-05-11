@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 import Home from './Home';
 import Player from './Player';
-import AddVideo from './Addvideo'
+
 import './App.css';
 
 function App() {
@@ -15,7 +15,6 @@ function App() {
     <Router>
       <Switch>
         <Route exact path="/" component={Home}></Route>
-        <Route exact path="/Add" component={AddVideo}></Route>
         <Route path="/player/:id" component={Player}></Route>
       </Switch>
     </Router>

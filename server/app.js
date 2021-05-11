@@ -2,21 +2,21 @@ const express = require('express');
 const fs = require('fs');
 const thumbsupply = require('thumbsupply');
 const cors = require('cors');
-const mongoose = require("mongoose");
+// const mongoose = require("mongoose");
 const app = express();
 
-require("dotenv").config();
+// require("dotenv").config();
 
-const uri = keys.mongoURI;
-mongoose
-  .connect(process.env.MONGODB_URI || uri, {
-    useNewUrlParser: true,
-    useCreateIndex: true
-  })
-  .then(() =>
-    console.log("The connection to MongoDB is established successfully")
-  )
-  .catch(err => console.log(err));
+// const uri = keys.mongoURI;
+// mongoose
+//   .connect(process.env.MONGODB_URI || uri, {
+//     useNewUrlParser: true,
+//     useCreateIndex: true
+//   })
+//   .then(() =>
+//     console.log("The connection to MongoDB is established successfully")
+//   )
+//   .catch(err => console.log(err));
 
 const videos = [
   {
@@ -38,6 +38,8 @@ const videos = [
     name: 'Sample 3'
   },
 ];
+
+const PORT = process.env.PORT || 4000;
 
 app.use(cors());
 
@@ -96,6 +98,6 @@ app.get('/video/:id', function(req, res) {
   }
 });
 
-app.listen(4000, function () {
-  console.log('Listening on port 4000!')
+app.listen(PORT, function () {
+  console.log(`Listening on port ${PORT}!`)
 });
