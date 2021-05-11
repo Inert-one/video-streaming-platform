@@ -1,5 +1,7 @@
 ## VideoCre- Video Streaming platform
-![VideoCre](https://github.com/Inert-one/video-streaming-platform/tree/master/client/src/logo.png)
+<p align="center">
+<img src="../master/client/src/logo.svg" alt="VideoCre" />
+</p>
 
 ## Clone the repo
 
